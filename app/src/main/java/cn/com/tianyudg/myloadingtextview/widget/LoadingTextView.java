@@ -163,9 +163,8 @@ public class LoadingTextView extends android.support.v7.widget.AppCompatTextView
 
     public LoadingTextView(Context context, String loadingText) {
         this(context, null, 0);
-        if (TextUtils.isEmpty(loadingText))
-        {
-            loadingText="努力加载中···";
+        if (TextUtils.isEmpty(loadingText)) {
+            loadingText = "努力加载中···";
         }
         this.loadingText = loadingText;
         textColor = DEFAULT_TEXT_COLOR;
@@ -225,9 +224,8 @@ public class LoadingTextView extends android.support.v7.widget.AppCompatTextView
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (TextUtils.isEmpty(loadingText))
-        {
-            Log.e(TAG, "onDraw: loadingText 为空" );
+        if (TextUtils.isEmpty(loadingText)) {
+            Log.e(TAG, "onDraw: loadingText 为空");
             return;
         }
 
@@ -237,7 +235,7 @@ public class LoadingTextView extends android.support.v7.widget.AppCompatTextView
             int width = 0;
             for (int j = 0; j <= i; j++) {
                 if (i == j) {
-                    width = width + widths.get(j)/2;
+                    width = width + widths.get(j) / 2;
                 } else {
                     width = width + widths.get(j);
                 }
@@ -261,8 +259,6 @@ public class LoadingTextView extends android.support.v7.widget.AppCompatTextView
 
 
     }
-
-
 
 
     @Override
